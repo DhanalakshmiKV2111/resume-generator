@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Resume</title>
+    <style>
+        body { font-family: Times New Roman; font-size: 14px; padding: 30px; }
+        h1, h2, h3 { margin: 0; }
+        .section { margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>{{ name }}</h1>
+    <p><strong>Email:</strong> {{ email }} | <strong>Phone:</strong> {{ phone }}</p>
+    <div class="section">
+        <h2>Profile</h2>
+        <p>{{ summary }}</p>
+    </div>
+    <div class="section">
+        <h2>Skills</h2>
+        <ul>
+        {% for skill in skills %}
+            <li>{{ skill }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+    <div class="section">
+        <h2>Experience</h2>
+        <ul>
+        {% for exp in experience %}
+            <li>{{ exp }}</li>
+        {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>
